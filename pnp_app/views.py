@@ -179,7 +179,7 @@ def requires_scope(required_scope):
 
 @api_view(['GET'])
 def fetch_local_events(request, location):
-    KEY = 'e96f00d013861615c3732975d2215fa059e6ad92740195fb5498df8de6fd9f06'
+    KEY = 'API_KEY'
     url = f'https://serpapi.com/search.json?engine=google_events&q=Family+Events+in+{location}&api_key={KEY}'
     response = requests.get(url)
     data = response.json()
@@ -187,7 +187,7 @@ def fetch_local_events(request, location):
 
 @api_view(['GET'])
 def fetch_weather(request, zipcode):
-    KEY = '1b801810edf2f965e69f04b8e2c365a4'
+    KEY = 'API KEY'
     url = f'https://api.openweathermap.org/data/2.5/weather?zip={zipcode},us&APPID={KEY}'
     response = requests.get(url)
     data = response.json()
